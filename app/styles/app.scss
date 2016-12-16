@@ -1,1 +1,12 @@
 @import 'ember-paper';
+
+$facebook-color: #3b5998;
+
+.text-align-center {
+  text-align: center;
+}
+
+.facebook-login {
+  background: $facebook-color;
+  color: white;
+}

@@ -10,4 +10,24 @@
      {{/toolbar.tools}}
 {{/paper-toolbar}}
 
+{{#unless session.isAuthenticated}}
+  {{#paper-dialog clickOutsideToClose=true escapeToClose=true}}
+
+    {{#paper-dialog-content}}
+      <h2 class="md-title text-align-center">Iniciar sessión</h2>
+
+      <div class="layout-column">
+        {{#paper-button class="facebook-login" onClick=(route-action 'signIn' 'facebook')}}Facebook{{/paper-button}}
+        <!-- {{#paper-button}}Twitter{{/paper-button}} -->
+        <!-- {{#paper-button}}Google{{/paper-button}} -->
+      </div>
+
+    {{/paper-dialog-content}}
+
+    {{#paper-dialog-actions class="layout-row"}}
+      <span class="flex"></span>
+    {{/paper-dialog-actions}}
+
+  {{/paper-dialog}}
+{{/unless}}
 {{ outlet }}
