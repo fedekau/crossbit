@@ -29,6 +29,13 @@ module.exports = function(environment) {
     // ENV.APP.LOG_TRANSITIONS = true;
     // ENV.APP.LOG_TRANSITIONS_INTERNAL = true;
     // ENV.APP.LOG_VIEW_LOOKUPS = true;
+    //
+    ENV['firebase'] = {
+      apiKey: 'AIzaSyDtpOfK-JRVHQzXQ3Ahb9arihRUMwaEH4Y',
+      authDomain: 'crossbit-development.firebaseapp.com',
+      databaseURL: 'https://crossbit-development.firebaseio.com',
+      storageBucket: 'crossbit-development.appspot.com',
+    };
   }
 
   if (environment === 'test') {
@@ -43,7 +50,12 @@ module.exports = function(environment) {
   }
 
   if (environment === 'production') {
-
+    ENV['firebase'] = {
+      apiKey: 'AIzaSyD5_cJv-wlwzV_wFaopDeAg6iNTWrWz8V4',
+      authDomain: 'crossbit-production.firebaseapp.com',
+      databaseURL: 'https://crossbit-production.firebaseio.com',
+      storageBucket: 'crossbit-production.appspot.com',
+    };
   }
 
   return ENV;
