@@ -1,6 +1,12 @@
 @import 'ember-paper';
 
 $facebook-color: #3b5998;
+$twitter-color: #1da1f2;
+
+$google-color-green: #3cba54;
+$google-color-yellow: #f4c20d;
+$google-color-red: #db3236;
+$google-color-blue: #4885ed;
 
 .text-align-center {
   text-align: center;
@@ -9,4 +15,18 @@ $facebook-color: #3b5998;
 .facebook-login {
   background: $facebook-color;
   color: white;
+}
+
+.twitter-login {
+  background: $twitter-color;
+  color: white;
+}
+
+.google-login {
+  border-width: 3px;
+  border-style: solid;
+  border-top-color: $google-color-green;
+  border-right-color: $google-color-yellow;
+  border-bottom-color: $google-color-red;
+  border-left-color: $google-color-blue;
 }
