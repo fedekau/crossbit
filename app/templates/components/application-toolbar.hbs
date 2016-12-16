@@ -1,0 +1,11 @@
+{{#paper-toolbar warn=true as |toolbar|}}
+     {{#toolbar.tools}}
+       <h2>Crossbit</h2>
+       <span class="flex"></span>
+       {{#if session.isAuthenticated}}
+         {{#paper-button onClick=(route-action "signOut")}}
+           {{paper-icon "exit_to_app"}}
+         {{/paper-button}}
+       {{/if}}
+     {{/toolbar.tools}}
+{{/paper-toolbar}}
