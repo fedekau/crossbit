@@ -34,9 +34,9 @@ module.exports = function(environment) {
     //
     ENV['firebase'] = {
       apiKey: 'AIzaSyDtpOfK-JRVHQzXQ3Ahb9arihRUMwaEH4Y',
-      authDomain: 'crossbit-development.firebaseapp.com',
-      databaseURL: 'https://crossbit-development.firebaseio.com',
-      storageBucket: 'crossbit-development.appspot.com',
+      authDomain: 'crossbit-cc703.firebaseapp.com',
+      databaseURL: 'https://crossbit-cc703.firebaseio.com',
+      storageBucket: 'crossbit-cc703.appspot.com',
     };
   }
 
