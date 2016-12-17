@@ -1,17 +1,33 @@
-{{#paper-dialog}}
+{{#paper-dialog fullscreen=true}}
     {{#paper-dialog-content}}
-    <h1 class="md-title">{{ register.exercise.name }}</h1>
+    <h1 class="md-title">Nuevo registro</h1>
+    {{#paper-autocomplete
+    options=exercises
+    selected=selectedExercise
+    searchField="name"
+    labelPath="name"
+    label="Elegi un ejercicio"
+    allowClear=true
+    noMatchesMessage="Mmm...parece que no existe."
+    onSelectionChange=(action (mut selectedExercise)) as |exercise select|}}
+    {{paper-autocomplete-highlight
+      label=exercise.name
+      searchText=select.searchText
+      flags="i"}}
+
+    {{/paper-autocomplete}}
     {{paper-input
-          type="number"
-          label="Peso"
-          value=register.weight
-          required=true
-          onChange=(action (mut register.weight))
-        }}
+      type="number"
+      label="Peso"
+      value=exerciseWeight
+      onChange=(action (mut exerciseWeight))
+      min="0"
+      max="1000"
+    }}
     {{/paper-dialog-content}}
 
     {{#paper-dialog-actions class="layout-row"}}
         {{#paper-button onClick=(action "cancel")}}Cancelar{{/paper-button}}
-        {{#paper-button onClick=(action "save" register) }}Guardar{{/paper-button}}
+        {{#paper-button disabled=saveDisabled onClick=(action "save" register) }}Guardar{{/paper-button}}
     {{/paper-dialog-actions}}
 {{/paper-dialog}}

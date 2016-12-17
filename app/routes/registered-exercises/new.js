@@ -1,15 +1,20 @@
 import Ember from 'ember';
+import RegisteredExercise from 'crossbit/models/registered-exercise';
 
 export default Ember.Route.extend({
+  model() {
+    return new RegisteredExercise();
+  },
+
   actions: {
-    addRegister(register) {
-      register.save().then(() => {
-        this.transitionTo('exercises');
+    registerExercise(registeredExercise) {
+      registeredExercise.save().then(() => {
+        this.transitionTo('registered-exercises');
       });
     },
 
-    cancelRegister(){
-      this.transitionTo('exercises');
+    cancelExerciseRegistration() {
+      this.transitionTo('registered-exercises');
     }
   }
 });
