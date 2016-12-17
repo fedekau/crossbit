@@ -4,9 +4,16 @@
           {{#card.title as |title|}}
             {{#title.text as |text|}}
             {{#text.headline}}{{exercise.name}}{{/text.headline}}
-            {{#text.subhead}}{{exercise.type}}{{/text.subhead}}
+            {{#text.subhead  }}
+              <div class="card-weight">
+                120kg
+              </div>
+            {{/text.subhead}}
             {{/title.text}}
-            <!-- {{title.media size="sm" src="tomster-9918e85a7f1a28c78b484c34cbe88579.png" alt="Tomster" title="Tomster"}} -->
+
+            {{#card.media size="xl"}}
+              <div class="card-media"></div>
+            {{/card.media}}
           {{/card.title}}
           {{#card.actions}}
             {{#paper-button onClick=(route-action "registerExercise" exercise)}}Registar{{/paper-button}}
