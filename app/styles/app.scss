@@ -50,7 +50,12 @@ body > .ember-view, .app-container {
   background: url($barbell-image);
 }
 
-.card-weight {
-  font-size: 20px;
-  color: crimson;
+.card-weight-last {
+  font-size: 15px;
+  color: $google-color-green;
+}
+
+.card-weight-max {
+  font-size: 15px;
+  color: $google-color-red;
 }
