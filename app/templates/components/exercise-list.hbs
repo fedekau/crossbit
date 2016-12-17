@@ -9,7 +9,7 @@
             <!-- {{title.media size="sm" src="tomster-9918e85a7f1a28c78b484c34cbe88579.png" alt="Tomster" title="Tomster"}} -->
           {{/card.title}}
           {{#card.actions}}
-            {{#paper-button}}Registar{{/paper-button}}
+            {{#paper-button onClick=(route-action "registerExercise" exercise)}}Registar{{/paper-button}}
           {{/card.actions}}
         {{/paper-card}}
       {{/each}}
