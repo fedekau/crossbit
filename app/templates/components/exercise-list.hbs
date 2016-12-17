@@ -1,0 +1,16 @@
+ <div class="layout-row layout-xs-column">
+      {{#each exercises as |exercise| }}
+        {{#paper-card class="flex-xs-100 flex-gt-xs-50" as |card|}}
+          {{#card.title as |title|}}
+            {{#title.text as |text|}}
+            {{#text.headline}}{{exercise.name}}{{/text.headline}}
+            {{#text.subhead}}{{exercise.type}}{{/text.subhead}}
+            {{/title.text}}
+            <!-- {{title.media size="sm" src="tomster-9918e85a7f1a28c78b484c34cbe88579.png" alt="Tomster" title="Tomster"}} -->
+          {{/card.title}}
+          {{#card.actions}}
+            {{#paper-button}}Registar{{/paper-button}}
+          {{/card.actions}}
+        {{/paper-card}}
+      {{/each}}
+  </div>
