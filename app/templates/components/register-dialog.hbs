@@ -1,0 +1,17 @@
+{{#paper-dialog}}
+    {{#paper-dialog-content}}
+    <h1 class="md-title">{{ register.exercise.name }}</h1>
+    {{paper-input
+          type="number"
+          label="Peso"
+          value=register.weight
+          required=true
+          onChange=(action (mut register.weight))
+        }}
+    {{/paper-dialog-content}}
+
+    {{#paper-dialog-actions class="layout-row"}}
+        {{#paper-button onClick=(action "cancel")}}Cancelar{{/paper-button}}
+        {{#paper-button onClick=(action "save" register) }}Guardar{{/paper-button}}
+    {{/paper-dialog-actions}}
+{{/paper-dialog}}
