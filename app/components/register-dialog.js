@@ -9,15 +9,5 @@ export default Ember.Component.extend({
 
   saveDisabled: Ember.computed('selectedExercise', 'exerciseWeight', function(){
     return !(this.get('selectedExercise') && this.get('exerciseWeight'));
-  }),
-
-  actions: {
-    save(register) {
-      this.get('onSave')(register);
-    },
-
-    cancel() {
-      this.get('onCancel')();
-    }
-  }
+  })
 });

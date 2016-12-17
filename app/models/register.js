@@ -2,5 +2,5 @@ import DS from 'ember-data';
 
 export default DS.Model.extend({
   weight: DS.attr('number'),
-  date: DS.attr('date')
+  date: DS.attr('date'),
 });

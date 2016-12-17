@@ -2,5 +2,5 @@ import DS from 'ember-data';
 
 export default DS.Model.extend({
   exercise: DS.belongsTo('exercise'),
-  registers: DS.hasMany('register')
+  registers: DS.hasMany('register', { async: true, inverse: null })
 });
