@@ -1,3 +1,37 @@
-{{exercise-list model=model }}
+{{#if model.length }}
+  {{registered-exercise-list model=model}}
+  {{else}}
+    <div class="layout-row layout-xs-column">
+        <div class="layout-column flex-xs flex-gt-xs-50">
+          {{#paper-card as |card|}}
+            {{#card.title as |title|}}
+              {{#title.text as |text|}}
+                {{#text.headline}}Hola!{{/text.headline}}
+                {{#text.subhead}}Para agregar ejercicios hace click en el boton de más. Podes agregar todos los ejercicios que quieras!{{/text.subhead}}
+              {{/title.text}}
+            {{#card.media size="xl"}}
+              {{paper-icon "info"}}
+            {{/card.media}}
+            {{/card.title}}
+          {{/paper-card}}
+
+          {{#paper-card as |card|}}
+            {{#card.title as |title|}}
+              {{#title.text as |text|}}
+                {{#text.headline}}Version Beta{{/text.headline}}
+                {{#text.subhead}}Esto es una version beta, y pueden haber muchos cambios.{{/text.subhead}}
+              {{/title.text}}
+            {{#card.media size="xl"}}
+              {{paper-icon "warning"}}
+            {{/card.media}}
+            {{/card.title}}
+          {{/paper-card}}
+        </div>
+      </div>
+{{/if}}
+
+{{#paper-button class="add-exercise-btn" fab=true onClick=(route-action "newExercise") }}
+  {{paper-icon "add"}}
+{{/paper-button}}
 
 {{ outlet }}

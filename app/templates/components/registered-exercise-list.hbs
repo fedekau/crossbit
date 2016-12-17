@@ -1,9 +1,9 @@
  <div class="layout-row layout-xs-column">
-      {{#each model.exercises as |exercise| }}
+      {{#each model as |registeredExercise| }}
         {{#paper-card class="flex-xs-100 flex-gt-xs-50" as |card|}}
           {{#card.title as |title|}}
             {{#title.text as |text|}}
-            {{#text.headline}}{{exercise.name}}{{/text.headline}}
+            {{#text.headline}}{{registeredExercise.exercise.name}}{{/text.headline}}
             {{#text.subhead  }}
               <div class="card-weight">
                 120kg
@@ -16,7 +16,7 @@
             {{/card.media}}
           {{/card.title}}
           {{#card.actions}}
-            {{#paper-button onClick=(route-action "registerExercise" exercise)}}Registar{{/paper-button}}
+            <!-- {{#paper-button onClick=(route-action "registerExercise" )}}Registar{{/paper-button}} -->
           {{/card.actions}}
         {{/paper-card}}
       {{/each}}
