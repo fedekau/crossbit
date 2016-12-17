@@ -10,7 +10,7 @@ export default Ember.Route.extend({
   actions: {
     signIn(provider) {
       this.get('session').open('firebase', { provider }).then(() => {
-        this.transitionTo('exercises');
+        this.transitionTo('registered-exercises');
       });
     },
 
