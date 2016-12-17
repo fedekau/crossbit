@@ -30,3 +30,8 @@ $google-color-blue: #4885ed;
   border-bottom-color: $google-color-red;
   border-left-color: $google-color-blue;
 }
+
+body > .ember-view, .app-container {
+  height: 100%;
+  width: 100%;
+}

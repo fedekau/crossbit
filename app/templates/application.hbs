@@ -1,5 +1,7 @@
-{{application-toolbar}}
-
+<div class="app-container layout-column flex" >
+  {{application-toolbar}}
+  {{#paper-content}}
+    {{ outlet }}
+  {{/paper-content}}
+</div>
 {{user-login}}
-
-{{ outlet }}
