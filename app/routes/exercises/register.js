@@ -1,13 +1,11 @@
 import Ember from 'ember';
 
 export default Ember.Route.extend({
-  model(params) {
-    return this.store.find('exercise', params['exercise_id']);
-  },
-
   actions: {
-    addRegister() {
-      this.transitionTo('exercises');
+    addRegister(register) {
+      register.save().then(() => {
+        this.transitionTo('exercises');
+      });
     },
 
     cancelRegister(){

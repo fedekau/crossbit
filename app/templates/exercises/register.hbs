@@ -1,16 +1,17 @@
 {{#paper-dialog}}
     {{#paper-dialog-content}}
-    <h1 class="md-title">{{ model.name }}</h1>
+    <h1 class="md-title">{{ model.exercise.name }}</h1>
     {{paper-input
           type="number"
           label="Peso"
-          value=weight
-          onChange=(action (mut weight))
+          value=model.weight
+          required=true
+          onChange=(action (mut model.weight))
         }}
     {{/paper-dialog-content}}
 
     {{#paper-dialog-actions class="layout-row"}}
         {{#paper-button onClick=(route-action "cancelRegister")}}Cancelar{{/paper-button}}
-        {{#paper-button onClick=(route-action "addRegister" weight) }}Guardar{{/paper-button}}
+        {{#paper-button onClick=(route-action "addRegister" model) }}Guardar{{/paper-button}}
     {{/paper-dialog-actions}}
 {{/paper-dialog}}

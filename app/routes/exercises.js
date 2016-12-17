@@ -7,7 +7,8 @@ export default Ember.Route.extend({
 
   actions: {
     registerExercise(exercise) {
-      this.transitionTo('exercises.register', exercise);
+      let register = this.store.createRecord('register', { exercise });
+      this.transitionTo('exercises.register', register);
     }
   }
 });
