@@ -2,7 +2,13 @@ import Ember from 'ember';
 
 export default Ember.Route.extend({
   model() {
-    return this.store.findAll('exercise');
+    let registers = this.store.findAll('register');
+    let exercises = this.store.findAll('exercise');
+
+    return Ember.RSVP.hash({
+      registers,
+      exercises
+    });
   },
 
   actions: {
