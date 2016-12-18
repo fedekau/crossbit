@@ -30,8 +30,11 @@
       </div>
 {{/if}}
 
-{{#paper-button class="add-exercise-btn" fab=true onClick=(route-action "newExercise") }}
-  {{paper-icon "add"}}
-{{/paper-button}}
+{{#ember-wormhole to="crossbit-app"}}
+  {{#paper-button warn=true class="add-exercise-btn" fab=true onClick=(route-action "newExercise") }}
+    {{paper-icon "add"}}
+  {{/paper-button}}
+{{/ember-wormhole}}
+
 
 {{ outlet }}
