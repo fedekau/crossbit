@@ -1,6 +1,6 @@
-{{#if model.registeredExercises.length }}
+{{#if model.length }}
   {{registered-exercise-list model=model}}
-  {{else}}
+{{else}}
     <div class="layout-row layout-xs-column">
         <div class="layout-column flex-xs flex-gt-xs-50">
           {{#paper-card as |card|}}

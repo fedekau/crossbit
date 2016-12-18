@@ -1,0 +1,16 @@
+        {{#paper-card class="flex-xs-100 flex-gt-xs-50" as |card|}}
+          {{#card.title as |title|}}
+            {{#title.text as |text|}}
+            {{#text.headline}}{{model.exercise.name}}{{/text.headline}}
+            {{#text.subhead}}
+              {{exercise-register-stats model=model}}
+            {{/text.subhead}}
+            {{/title.text}}
+            {{#card.media size="xl"}}
+              <div class="card-media"></div>
+            {{/card.media}}
+          {{/card.title}}
+          {{#card.actions}}
+            <!-- {{#paper-button onClick=(action "moreInfo")}}Más{{/paper-button}} -->
+          {{/card.actions}}
+        {{/paper-card}}
