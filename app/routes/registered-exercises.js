@@ -9,6 +9,16 @@ export default Ember.Route.extend({
   actions: {
     newExercise() {
       this.transitionTo('registered-exercises.new');
+    },
+
+    deleteRegisteredExercise(model) {
+      var deletions = model.get('registers').map(function(register) {
+        return register.destroyRecord();
+      });
+
+      Ember.RSVP.all(deletions).then(function() {
+        return model.destroyRecord();
+      });
     }
   }
 });

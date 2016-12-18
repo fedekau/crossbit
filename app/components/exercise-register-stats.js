@@ -16,6 +16,6 @@ export default Ember.Component.extend({
       return e1.get('date') - e2.get('date');
     });
 
-    return orderedRegisters[orderedRegisters.length - 1].get('weight');
+    return orderedRegisters.length ? orderedRegisters[orderedRegisters.length - 1].get('weight') : "";
   })
 });
