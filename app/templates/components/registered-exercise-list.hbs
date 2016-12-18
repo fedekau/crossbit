@@ -1,14 +1,11 @@
  <div class="layout-row layout-xs-column">
-      {{#each model as |registeredExercise| }}
+      {{#each model.registeredExercises as |registeredExercise| }}
         {{#paper-card class="flex-xs-100 flex-gt-xs-50" as |card|}}
           {{#card.title as |title|}}
             {{#title.text as |text|}}
             {{#text.headline}}{{registeredExercise.exercise.name}}{{/text.headline}}
             {{#text.subhead  }}
-              <div class="layout-column layout-align-center-start">
-                <div>Último: 120kg</div>
-                <div>Máximo: 120kg</div>
-              </div>
+            {{exercise-register-stats model=model.registers exercise=registeredExercise}}
             {{/text.subhead}}
             {{/title.text}}
 
