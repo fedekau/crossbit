@@ -1,4 +1,5 @@
 @import 'ember-paper';
+@import 'images';
 
 $facebook-color: #3b5998;
 $twitter-color: #1da1f2;
@@ -7,8 +8,6 @@ $google-color-green: #3cba54;
 $google-color-yellow: #f4c20d;
 $google-color-red: #db3236;
 $google-color-blue: #4885ed;
-
-$barbell-image: 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAABJ0lEQVR4Xu2YQQ7CMAwE6f8fDULiBG3T0RqpsodrlmQ9XieI7TH8sw2v/yEAEzCcgCMwPABego6AIzCcgCMwPAC+Ao6AIzCcgCMwPAC+AnQEngeJoftUBS/2Q43HB1ZV/tkn9iMA2JGYODxvJY/9mIAdxGdUY+KrlsL12OteAuJNYRGJPPYqAEfgl0AcqyTT8Lux18oRODIDa7osf3sXwMlP80svlgkovAQdgcvTWyO83R1QUxbb5VaXILNeoxbAnV6Bmp6yXf6SgDMLl95WVkOkjv34fwDkHxOH563ksR8TsEL8tR4Th+et5LEfE7BC3H2dJqAdDwG0ayksyARAYO3kJqBdS2FBJgACayc3Ae1aCgsyARBYO7kJaNdSWJAJgMDayccn4AVcNVNBu4qDOQAAAABJRU5ErkJggg==';
 
 .text-align-center {
   text-align: center;
@@ -44,10 +43,16 @@ body > .ember-view, .app-container {
   bottom: 32px;
 }
 
-.card-media {
+.card-media-weightlifting {
   height: 64px;
   width: 64px;
   background: url($barbell-image);
+}
+
+.card-media-cardio {
+  height: 64px;
+  width: 64px;
+  background: url($heartbeat-image);
 }
 
 .card-weight-last {
